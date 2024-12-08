@@ -54,7 +54,7 @@ const SendTask = () => {
     };
 
     emailjs
-      .send('service_lj243ps', 'template_qurij5e', templateParams, 'v4COUBXpPX933fS8F')
+      .send('service_7phsvpf', 'emplate_4b1hq3j', templateParams, 'FQDhKeQVIrAdhhbN6')
       .then((result) => {
         console.log('Email sent:', result.text);
       })
