@@ -1,4 +1,3 @@
-import { createSlice } from '@reduxjs/toolkit';
 
 // reducers/modalWindows/modalSlice.js
 
