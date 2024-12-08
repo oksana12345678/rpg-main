@@ -21,7 +21,7 @@ export type Stage = {
 export type Quest = {
   id: string | number;
   name: string;
-  type: string;
+  type?: string;
   subtitle?: string;
   imageUrl: string;
   description: string;
