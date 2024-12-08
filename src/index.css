@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Miama Nueva';
+  src: url('assets/fonts/miamanueva/MiamaNueva.woff2') format('woff2'),
+       url('assets/fonts/miamanueva/MiamaNueva.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kobzar KS';
+  src: url('assets/fonts/kobzarks/kobzarks.woff2') format('woff2'),
+       url('assets/fonts/kobzarks/kobzarks.woff') format('woff'),
+       url('assets/fonts/kobzarks/kobzarks.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.swiper-pagination-bullets {
+  @apply bottom-0 w-full flex items-center justify-center gap-3;
+}
+
+.swiper-pagination-bullet {
+  @apply h-2 w-2 rounded-full bg-white transition-colors duration-1000;
+}
+
+.swiper-pagination-bullet-active {
+  @apply h-3 w-3;
+}
