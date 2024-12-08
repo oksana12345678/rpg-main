@@ -1,5 +1,5 @@
-import { STORAGE_KEYS } from 'mocks/constants';
-import { User, UserInitData } from 'types/user';
+import { STORAGE_KEYS } from '../../../src/mocks/constants';
+import { User, UserInitData } from '../../types/user';
 
 export const getUser = (): User | null => {
   const user = localStorage.getItem(STORAGE_KEYS.USER);

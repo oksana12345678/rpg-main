@@ -1,5 +1,5 @@
-import { STORAGE_KEYS } from 'mocks/constants';
-import { QuestsTask } from 'types/quest';
+import { QuestsTask } from '../../types/quest';
+import { STORAGE_KEYS } from '../../../src/mocks/constants';
 
 // Function to retrieve quests from localStorage
 export const getQuestsTask = (): QuestsTask[] => {

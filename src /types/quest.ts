@@ -8,6 +8,7 @@ export type Achievement = {
   createdAt: string;
   updatedAt: string;
 };
+
 export type Stage = {
   label: string;
   name: string;
@@ -21,7 +22,7 @@ export type Stage = {
 export type Quest = {
   id: string | number;
   name: string;
-  type: string;
+  type?: string;
   subtitle?: string;
   imageUrl: string;
   description: string;
