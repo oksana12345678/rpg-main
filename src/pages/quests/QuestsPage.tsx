@@ -9,9 +9,9 @@ const QuestsPage = () => {
   if (!quests) return null;
 
   return (
-    <div className="relative flex h-full flex-col gap-3">
+    <div className="relative m-auto flex h-full max-w-max flex-col gap-3">
       <Header pageName="Вибір квесту" />
-      <div className="flex flex-1 flex-col gap-5 p-4 pb-10">
+      <div className="flex flex-1 flex-col gap-[32px] p-6 pb-10">
         {quests.map((quest) => (
           <QuestCard key={quest.id} quest={quest} />
         ))}
