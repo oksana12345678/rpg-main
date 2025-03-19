@@ -5,8 +5,6 @@ import { Pagination } from 'swiper/modules';
 
 import { ROLES } from 'constants/roles';
 import { ROUTES } from 'constants/routes';
-// import signetSrc from 'assets/images/signet.png';
-// import parchmentSrc from 'assets/images/parchment.png';
 import CustomButton from 'components/Buttons/CustomButton';
 
 import userApi from 'store/user/userApi';
@@ -31,6 +29,8 @@ const RegisterPage = () => {
     }
   };
 
+  const isDisabled = ROLES[role]?.closed;
+
   return (
     <div className="flex h-full w-full flex-1 flex-col gap-3">
       <p className="text-center text-xl font-semibold">Оберіть роль</p>
@@ -49,10 +49,7 @@ const RegisterPage = () => {
       >
         {ROLES.map(({ Icon, ...role }) => (
           <SwiperSlide className="flex max-h-[90%] items-center justify-center" key={role.value}>
-            <div
-              className="h-full max-h-[440px] w-[310px] bg-[url('assets/images/parchment.png')] bg-contain bg-center bg-no-repeat"
-              // style={{ backgroundImage: `url(${parchmentSrc})` }}
-            >
+            <div className="h-full max-h-[440px] w-[310px] bg-[url('assets/images/parchment.png')] bg-contain bg-center bg-no-repeat">
               <div className="relative z-10 flex h-full flex-col py-9">
                 <Icon className="mx-auto h-[40%]" />
 
@@ -65,11 +62,8 @@ const RegisterPage = () => {
                 </p>
 
                 {role.isNeedModeration && (
-                  <div
-                    className="absolute -bottom-6 -right-5 flex h-24 w-24 items-center justify-center bg-[url('assets/images/signet.png')] bg-contain bg-no-repeat"
-                    // style={{ backgroundImage: `url(${signetSrc})` }}
-                  >
-                    <p className="text-yalow_accent mb-2 content-center px-2 text-center font-kobzar text-sm leading-4">
+                  <div className="absolute -bottom-6 -right-5 flex h-24 w-24 items-center justify-center bg-[url('assets/images/signet.png')] bg-contain bg-no-repeat">
+                    <p className="mb-2 content-center px-2 text-center font-kobzar text-sm leading-4 text-yalow_accent">
                       Роль потребує модерації
                     </p>
                   </div>
@@ -80,7 +74,11 @@ const RegisterPage = () => {
         ))}
       </Swiper>
 
-      <CustomButton onClick={handleSubmit} className="mb-7 w-[80%]">
+      <CustomButton
+        onClick={handleSubmit}
+        className={`mb-7 w-[80%] ${isDisabled ? 'cursor-not-allowed bg-gray-400' : ''}`}
+        disabled={isDisabled}
+      >
         Обрати
       </CustomButton>
     </div>

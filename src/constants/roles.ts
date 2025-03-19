@@ -8,6 +8,7 @@ export const ROLES = [
       'Пригодник - початковий рівень. Має доступ до базового квесту для візиту в академію та отримання вищих рівнів.',
     isNeedModeration: false,
     Icon: RolesImages.Adventurer,
+    closed: false,
   },
   {
     value: 'avatar',
@@ -16,6 +17,7 @@ export const ROLES = [
       'Аватар - ментор з досвідом від 3-х років, який проходить квести, допомагає пригодникам проходити квести, заробляє монети.',
     isNeedModeration: true,
     Icon: RolesImages.Avatar,
+    closed: true,
   },
   {
     value: 'kingdom',
@@ -23,5 +25,6 @@ export const ROLES = [
     description: 'Королівство - представник компанії, який може розміщувати квести.',
     isNeedModeration: true,
     Icon: RolesImages.Kingdom,
+    closed: true,
   },
 ];
