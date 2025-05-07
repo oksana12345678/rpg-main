@@ -1,0 +1,52 @@
+{
+  "frontend_developer": {
+    "languages": ["HTML", "CSS", "JavaScript", "TypeScript"],
+    "css_frameworks": ["Bootstrap", "Tailwind CSS", "Bulma", "Foundation", "Material UI"],
+    "preprocessors": ["SASS", "SCSS", "LESS", "PostCSS"],
+    "javascript_frameworks": ["React.js", "Vue.js", "Angular", "Svelte", "Next.js", "Nuxt.js"],
+    "state_management": ["Redux", "MobX", "Zustand", "Recoil", "Vuex", "Pinia"],
+    "build_tools": ["Vite", "Webpack", "Parcel", "Gulp", "Rollup"],
+    "package_managers": ["npm", "yarn", "pnpm"],
+    "testing": {
+      "unit_testing": ["Jest", "Mocha", "Chai"],
+      "integration_testing": ["Cypress", "Playwright", "Testing Library"],
+      "e2e_testing": ["Cypress", "Selenium", "Puppeteer"]
+    },
+    "performance_optimization": [
+      "Lazy Loading",
+      "Code Splitting",
+      "Tree Shaking",
+      "Service Workers",
+      "CDN Usage"
+    ],
+    "api_interaction": [
+      "REST API",
+      "GraphQL",
+      "WebSockets",
+      "gRPC",
+      "Apollo Client",
+      "TanStack Query (React Query)"
+    ],
+    "authentication": [
+      "OAuth",
+      "JWT",
+      "Session-based Auth",
+      "Firebase Authentication",
+      "Clerk",
+      "Auth0"
+    ],
+    "version_control": ["Git", "GitHub", "GitLab", "Bitbucket"],
+    "dev_tools": ["ESLint", "Prettier", "Husky", "Lint-staged", "Storybook"],
+    "web_security": ["CORS", "CSRF", "XSS", "Content Security Policy (CSP)", "HTTPS & SSL"],
+    "browser_apis": ["Geolocation API", "WebRTC", "WebSockets", "Notifications API", "Canvas API"],
+    "progressive_web_apps": ["Service Workers", "Web App Manifest", "IndexedDB", "Cache API"],
+    "CI_CD": ["GitHub Actions", "Travis CI", "CircleCI", "Jenkins", "Vercel", "Netlify"],
+    "soft_skills": [
+      "Problem Solving",
+      "Communication",
+      "Teamwork",
+      "Time Management",
+      "Critical Thinking"
+    ]
+  }
+}
