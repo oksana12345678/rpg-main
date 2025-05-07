@@ -50,7 +50,7 @@ export default {
         couch_hover: 'rgba(247, 236, 110, 0.8)',
         mentoring_hover: 'rgba(202, 138, 245, 0.8)',
 
-        main_bg_color: '#141415',
+        main_bg_color: '#06000C',
         shadow_text_accent: '#3b3b3f',
       },
       fontFamily: {

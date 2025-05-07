@@ -21,7 +21,7 @@ export const createUser = (userInitData: UserInitData, role: string): User => {
     firstName: userInitData.first_name,
     lastName: userInitData.last_name,
     role: role,
-    imageUrl: 'https://quests-app-bucket.s3.eu-north-1.amazonaws.com/images/ava6.jpg',
+    imageUrl: userInitData.photo_url ? userInitData.photo_url : '',
     level: 0,
     points: 0,
     coins: 0,
@@ -31,7 +31,8 @@ export const createUser = (userInitData: UserInitData, role: string): User => {
         id: 117,
         name: 'Початківець',
         description: 'Отримати перший рівень',
-        imageUrl: 'https://quests-app-bucket.s3.eu-north-1.amazonaws.com/images/achievement_1.png',
+        imageUrl:
+          'https://res.cloudinary.com/djw3ymcpe/image/upload/v1746639222/%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%B8%D0%B8%CC%86_%D0%BA%D0%B2%D0%B5%D1%81%D1%82_mdzi6l.png',
         isLocked: false,
         userId: 18,
         createdAt: '2024-08-21T15:52:06.959Z',
@@ -83,7 +84,8 @@ export const createUser = (userInitData: UserInitData, role: string): User => {
         quest: {
           id: 55,
           name: 'Базовий квест',
-          imageUrl: 'https://quests-app-bucket.s3.eu-north-1.amazonaws.com/images/basic.png',
+          imageUrl:
+            'https://res.cloudinary.com/djw3ymcpe/image/upload/v1746639222/%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%B8%D0%B8%CC%86_%D0%BA%D0%B2%D0%B5%D1%81%D1%82_mdzi6l.png',
           description: 'Візит до Академії для отримання першого рівня та вибору базового класу',
           long_description:
             'Детальний опис базового квесту, включаючи всі його особливості та етапи.',
@@ -108,7 +110,8 @@ export const createUser = (userInitData: UserInitData, role: string): User => {
         quest: {
           id: 56,
           name: 'Рутинний квест',
-          imageUrl: 'https://quests-app-bucket.s3.eu-north-1.amazonaws.com/images/routine.png',
+          imageUrl:
+            'https://res.cloudinary.com/djw3ymcpe/image/upload/v1746639222/%D1%80%D1%83%D1%82%D0%B8%D0%BD%D0%BD%D0%B8%D0%B8%CC%86_%D0%BA%D0%B2%D0%B5%D1%81%D1%82_j5auwm.png',
           description: 'Виконання тестового завдання для отримання артефакту та Мідних Монет',
           long_description:
             'Детальний опис рутинного квесту, включаючи всі його особливості та етапи.',

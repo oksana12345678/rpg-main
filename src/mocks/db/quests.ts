@@ -24,7 +24,8 @@ export const initializeQuests = () => {
       {
         name: 'Базовий квест',
         subtitle: 'Візит до Академії',
-        imageUrl: 'https://quests-app-bucket.s3.eu-north-1.amazonaws.com/images/basic.png',
+        imageUrl:
+          'https://res.cloudinary.com/djw3ymcpe/image/upload/v1746639222/%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%B8%D0%B8%CC%86_%D0%BA%D0%B2%D0%B5%D1%81%D1%82_mdzi6l.png',
         description: 'Візит до Академії для отримання першого рівня та вибору базового класу',
         long_description: `Ти тільки розпочав свою подорож у світ IT. Перший крок - відвідати Академію, де ти можеш
           обрати свій перший базовий клас: Винахідник UI/UX або Воїн Фронтенда. В Академії ти
@@ -76,7 +77,8 @@ export const initializeQuests = () => {
       {
         name: 'Рутинний квест',
         subtitle: 'Створення мобільного лендингу',
-        imageUrl: 'https://quests-app-bucket.s3.eu-north-1.amazonaws.com/images/routine.png',
+        imageUrl:
+          'https://res.cloudinary.com/djw3ymcpe/image/upload/v1746639222/%D1%80%D1%83%D1%82%D0%B8%D0%BD%D0%BD%D0%B8%D0%B8%CC%86_%D0%BA%D0%B2%D0%B5%D1%81%D1%82_j5auwm.png',
         description: 'Виконання тестового завдання для отримання артефакту та Мідних Монет',
         long_description:
           'Цей квест дасть вам можливість отримати базові ресурси та покращити свої навички. Завдання включає проходження тесту, який допоможе вам здобути артефакт та мідні монети для подальших пригод.',

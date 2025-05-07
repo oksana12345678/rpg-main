@@ -4,7 +4,6 @@ import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { Achievement, ActiveQuest } from 'types/quest';
 
 import { UserInfo } from './components/UserInfo';
-import { ProfileInfoBlock } from './components/ProfileInfoBlock';
 import ModalWindow from 'components/ModalWindow/ModalWindow';
 import { ROUTES } from 'constants/routes';
 import modalActions from 'store/modalWindows/modalWindows';
@@ -12,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import questsActions from 'store/quests/questsSlice';
 import { MODAL_TEXTS } from '../../constants/modalChooseClass';
 import UserSkills from './components/UserSkills';
+import AchievementsAndQuests from './components/AchievementsAndQuests';
 
 const ProfilePage = () => {
   const user = useAppSelector((state) => state.user.user);
@@ -61,7 +61,6 @@ const ProfilePage = () => {
       <div className="mx-auto my-auto w-full flex-grow p-4 pb-10 sm:max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg">
         <div className="mx-auto max-w-md">
           <UserInfo user={user} />
-          {/* //TODO example to use */}
           <div className="py-6">
             {user?.userClass && (
               <p className="text-lg font-semibold text-white">
@@ -70,12 +69,9 @@ const ProfilePage = () => {
             )}
             <UserSkills />
           </div>
-          <ProfileInfoBlock
-            title="Досягнення"
-            icons={achievementIcons}
-            dynamicText="Всі досягнення"
-          />
-          <ProfileInfoBlock title="Активні квести" icons={questIcons} dynamicText="Всі квести" />
+          <div className="relative">
+            <AchievementsAndQuests achievementIcons={achievementIcons} questIcons={questIcons} />
+          </div>
         </div>
       </div>
       <ModalWindow

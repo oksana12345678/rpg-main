@@ -4,14 +4,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 type InitialState = {
   modalChooseClass: boolean;
-
+  selectedSkills: string[];
   successModalOpen: boolean;
   errorModalOpen: boolean;
 };
 
 const initialState: InitialState = {
   modalChooseClass: false,
-
+  selectedSkills: [],
   successModalOpen: false,
   errorModalOpen: false,
 };
@@ -35,8 +35,10 @@ export const modalSlice = createSlice({
     setCloseModal(state) {
       state.successModalOpen = false;
       state.errorModalOpen = false;
-
       state.modalChooseClass = false;
+    },
+    setSelected(state, action) {
+      state.selectedSkills = action.payload;
     },
   },
 });

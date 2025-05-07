@@ -1,7 +1,6 @@
 import { UserStat } from './UserStat';
 import { ROLES } from 'constants/roles';
 import { ProfileImages } from 'components/Images';
-
 import { User } from 'types/user';
 import { ProfileOverlay } from './ProfileOverlay';
 import Avatar from 'components/Avatar';
@@ -15,10 +14,9 @@ export const UserInfo: React.FC<UserInfoProps> = ({ user }) => {
   const shortName = generateName({ user, format: 'short' });
   const initials = generateName({ user, format: 'initials' });
   const userRole = ROLES.find((role) => role.value === user.role)?.label || '';
-
   return (
     <div className="mx-auto flex w-full max-w-[450px] flex-grow flex-col items-center p-1">
-      <div className="bg-orang_accent relative mb-1 mt-1 w-full rounded-xl">
+      <div className="relative mb-1 mt-1 w-full rounded-xl bg-orang_accent">
         <ProfileOverlay position={'top-left'} />
         <ProfileOverlay position={'bottom-right'} />
 
@@ -30,14 +28,14 @@ export const UserInfo: React.FC<UserInfoProps> = ({ user }) => {
                 initials={initials}
                 className="mt-2 w-24 rounded-full object-cover"
               />
-              <h2 className="text-accent_button1 mt-2 font-semibold">{shortName}</h2>
+              <h2 className="mt-2 font-semibold text-accent_button1">{shortName}</h2>
             </div>
           </div>
 
           <div className="z-20 mt-2 flex w-[50%] flex-col space-y-1">
             <div className="mb-4 flex items-center justify-center font-semibold">
               <span className="text-gray-600">Роль:</span>
-              <p className="text-accent_button1 ml-2">{userRole}</p>
+              <p className="ml-2 text-accent_button1">{userRole}</p>
             </div>
 
             <div className="h-full w-full">
