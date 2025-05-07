@@ -11,7 +11,7 @@ import modalActions from 'store/modalWindows/modalWindows';
 import { useNavigate } from 'react-router-dom';
 import questsActions from 'store/quests/questsSlice';
 import { MODAL_TEXTS } from '../../constants/modalChooseClass';
-import UserSkills from './components/userSkills';
+import UserSkills from './components/UserSkills';
 
 const ProfilePage = () => {
   const user = useAppSelector((state) => state.user.user);
